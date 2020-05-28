@@ -30,13 +30,13 @@ CREATE TABLE IF NOT EXISTS users (
     created_on TIMESTAMP NOT NULL DEFAULT NOW(),
     updated_on TIMESTAMP,
     last_login TIMESTAMP,
-    theme THEME NOT NULL DEFAULT 'LIGHT',
+    theme THEMES NOT NULL DEFAULT 'LIGHT',
 
     PRIMARY KEY (id),
     FOREIGN KEY (link_id) REFERENCES links(id)
 );
 
-CREATE TABLE IF NOT EXISTS users_contacts (
+CREATE TABLE IF NOT EXISTS contacts (
     id SERIAL,
     user_id INTEGER NOT NULL,
     contact_id INTEGER NOT NULL,

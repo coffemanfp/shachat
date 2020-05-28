@@ -6,19 +6,22 @@ import (
 	"github.com/coffemanfp/shachat/config"
 	"github.com/coffemanfp/shachat/databases"
 	"github.com/coffemanfp/shachat/models"
+	"upper.io/db.v3/lib/sqlbuilder"
 	db "upper.io/db.v3"
 )
 
 // SelectUsers - Consults a users list.
-func SelectUsers(usersIDs []int) (users []models.User, err error) {
+func SelectUsers(dbConn sqlbuilder.Database, usersIDs []int) (users []models.User, err error) {
 	settings, err := config.GetSettings()
 	if err != nil {
 		return
 	}
 
-	dbConn, err := databases.Get()
-	if err != nil {
-		return
+	if dbConn == nil {
+		dbConn, err = databases.Get()
+		if err != nil {
+			return
+		}
 	}
 
 	usersTable := dbConn.Collection("users")

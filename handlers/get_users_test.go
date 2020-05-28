@@ -6,10 +6,16 @@ import (
 	"testing"
 
 	"github.com/coffemanfp/shachat/router"
+	"github.com/coffemanfp/shachat/config"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestAllGetUsers(t *testing.T) {
+	err := config.SetSettingsByFile("../config.yaml")
+	if err != nil {
+		t.Errorf("unexpected error on settings:\n%s", err)
+	}
+
 	router := router.NewRouter()
 
 	w := httptest.NewRecorder()

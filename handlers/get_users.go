@@ -41,6 +41,7 @@ func GetUsers(c *gin.Context) {
 
 	settings, err := config.GetSettings()
 	if err != nil {
+		log.Println(err)
 		c.AbortWithStatus(http.StatusInternalServerError)
 		return
 	}

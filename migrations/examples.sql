@@ -69,70 +69,70 @@ ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (1, 2)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (1, 3)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (1, 4)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (2, 1)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (2, 5)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (3, 1)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (3, 4)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (4, 1)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (4, 3)
 ON CONFLICT DO
     NOTHING;
 
 INSERT INTO
-    users_contacts(user_id, contact_id)
+    contacts(user_id, contact_id)
 VALUES
     (5, 1)
 ON CONFLICT DO
